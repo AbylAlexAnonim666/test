@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/index.css">
+    <script src="index.js"></script>
+    <script src="/index.js"></script>
+    <title></title>
+</head>
+<body>
+    <style>
+    .misc {
+        display: block;
+        width: 90%;
+        padding: 15px 0;
+        background-color: #282828;
+        color: #007bffe4;
+        border: 1px solid #444;
+        border-radius: 5px;
+        margin-top: 20px;
+        text-align: left;
+        font-size: 14px;
+        transition: background-color 0.3s;
+    }
+
+    .misc:hover {
+    background-color: #383838;
+    }
+
+    .misc span {
+    display: inline-block;
+    float: left;
+    margin-left: 15px;
+    }
+
+    .icon {
+    display: inline-block;
+    float: right;
+    margin-right: 15px;
+    color: #888;
+    }
+
+    .icon::before {
+    content: ">";
+    font-size: 16px;
+    }
+
+    #language {
+        background-color: #282828;
+        color: #007bffe4;
+        border: 1px solid #444;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 14px;
+        margin-left: 5px;
+        transition: background-color 0.3s;
+    }
+    </style>  
+    <span class="welcome" id="sett">Settings</span>
+    <center>
+    <button class="misc">
+    <span id="chng">Change language</span>
+        <select id="language">
+            <option value="en" id="en">English</option>
+            <option value="ru" id="ru">Russian</option>
+        </select>
+        <i class="icon"></i>
+    </button>
+    <button class="misc">
+        <span id="delacc" style="color: red;">Delete account (Temporarily unavailable)</span>
+        <i class="icon"></i>
+    </button>
+    </center>
+
+    </body>
+</html>

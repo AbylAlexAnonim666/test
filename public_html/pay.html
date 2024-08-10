@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.png">
+    <link rel="stylesheet" href="/css/pay1.css">
+    <meta name="description" content="zetwallet, zet, wallet, crypto, binance, зетваллет, ptndfkktn, яуецфддуе, tegwallet">
+    <title>Пополнение кошелька</title>
+</head>
+<body>
+    <section>
+        <h1 class="ht">Пополнение средств через криптокошелек</h1>
+        <p>Инструкция: переходите по qr коду или копируете адрес перевода и переводите на него сумму перевода, обязательно вводите свой логин в коментариях к платежу.
+            <br><br>
+            Примечания: ОБЯЗАТЕЛЬНО переводить итоговую сумму, если введете сумму меньше или больше ваш платеж не засчитается.
+        </p>        
+       <img class="qr" src="qr.PNG" alt=""> 
+    </section>
+    <br><br>
+    <center>
+        <div class="cont">
+        <section>
+            <p>Сеть</p>
+            <h1>Tron (TRC20)</h1>
+        </section>
+        <section>
+            <p>Адрес перевода</p>
+            <div class="contadr">
+                <h1 id="wallet-address">TAbuJifVVscTWj3zcBqhmDhq2M9mBvHmQV</h1>
+            </div>
+            <button class="copy" onclick="copyAddress()">Copy</button>
+            <br>
+            <br>
+        </section>
+        <section>
+            <p>Сумма перевода</p>
+            <h1><span id="amount"></span>$</h1>
+        </section>
+    </div>
+    <p>Комиссия за платеж(2%): <span id="commission"></span>$</p>
+    <p>Итоговая сумма: <span id="total"></span>$</p>
+    <p>после перевода нажмите кнопку ниже</p>
+        <form action="tg.php" method="post">
+            <input type="text" name="username" placeholder="Enter login">
+            <br>
+            <p>(На логин который вы введете выше зачисляться деньги)</p>
+            <input type="hidden" class="paying" name="total" id="total-input">
+            <button class="paying" type="submit">Проверка платежа</button> 
+        </form>
+    </center>
+    <br>
+    <script>
+        const amount = new URLSearchParams(window.location.search).get('amount');
+        document.getElementById('amount').innerText = amount;
+        const commission = (amount * 0.02).toFixed(2);
+        document.getElementById('commission').innerText = commission;
+        const total = (parseFloat(amount) + parseFloat(commission)).toFixed(2);
+        document.getElementById('total').innerText = total;
+        document.getElementById('total-input').value = total;
+    
+        function copyAddress() {
+          const address = document.getElementById('wallet-address').innerText;
+          navigator.clipboard.writeText(address);
+          alert('Address copied to clipboard!');
+        }
+      </script>
+    <script src="js/index.js"></script>
+</body>
+</html>

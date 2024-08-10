@@ -1,0 +1,54 @@
+1. create console app in visual studio
+
+2. download:
+1: ImGui.Net
+2: Veldrid ImGui
+3: SixLabors ImageSharp
+4: Vortice Mathematics
+5: Vortice.Direct3D11
+6: ClickableTransparentOverlay
+7: Vortice.D3DCompiler
+
+
+
+Program.cs:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Guide
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+
+            while (true)
+            {
+                    // Create an instance of your RenderClass
+                    RenderClass render = new RenderClass();
+                    // Show the ImGui menu
+                    render.Start().Wait();
+            }
+        }
+    }
+}
+
+
+RenderClass.cs:
+using ImGuiNET;
+using ClickableTransparentOverlay;
+
+namespace guide
+{
+   public class RenderClass : Overlay
+   {
+	protected override void Render()
+	{
+	    ImGui.Begin("Guide");
+	    ImGui.End();
+	}
+   }
+}

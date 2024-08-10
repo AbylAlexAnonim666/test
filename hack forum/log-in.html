@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/log.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="login-form">
+        <h2>Вход</h2>
+        <form action="/login.php" method="post">
+          <label for="username">Логин</label>
+          <input type="text" id="username" name="username" placeholder="Введите логин">
+          <label for="password">Пароль</label>
+          <input type="password" id="password" name="password" placeholder="Введите пароль">
+          <input type="submit" value="Войти">
+          <a href="/register.html" class="forgot-password">Нет аккаунта? Зарегистрироваться</a>
+          <a href="/forgot.html" class="forgot-password">Забыли пароль?</a>
+        </form>
+      </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+    <script src="/index.js"></script>
+    <title></title>
+</head>
+<body>
+    <div class="header">
+        <span class="welcome" id="welcm">Welcome</span>
+    </div>
+    <center>
+        <h1 id="counter">500</h1>
+        <div id="clicker">
+            <button class="clicker">
+                <p style="color: #00ff9596;">soon</p>
+            </button>
+        </div>
+    </center>
+    <script>
+    let counter = 500;
+
+    document.getElementById('clicker').addEventListener('click', function() {
+        counter++;
+        document.getElementById('counter').innerHTML = counter;
+    });
+    </script>
+</body>
+</html>
